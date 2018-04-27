@@ -2,180 +2,229 @@
    By: Cloud Hop (and maybe DeltaPHC) */
 
 body {
-	background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
-	color: #f0f0f0;
-	margin: 2rem 0 0 0;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-	min-width: 360px;
-  font-size: 16px;
+    background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
+    color: #f0f0f0;
+    margin: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    min-width: 360px;
+    font-size: 16px;
 }
 
 a:link {
-	color: #9cbbff;
-	text-decoration: none;
+    color: #9cbbff;
+    text-decoration: none;
 }
 
 a:hover {
-	color: #afcfff;
-	text-decoration: underline;
+    color: #afcfff;
+    text-decoration: underline;
 }
 
 a:visited {
-	color: #99b;
+    color: #99b;
+}
+article{
+    box-sizing: border-box;
 }
 article ol, article ul {
-  margin: 0;
-  padding: 0 0 0 1.5rem;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
 }
 
 article ol li, article ul li {
-	margin: 0 0 0.5rem 0;
-	padding-left: 0.2rem;
+    margin: 0 0 0.5rem 0;
+    padding-left: 0.2rem;
+}
+
+article ol li ol {
+    margin-top: 0.5rem;
 }
 
 .channel_name {
-	background-color: rgba(0, 0, 0, 0.1);
-	color: #6c8bd7;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #6c8bd7;
+    white-space: nowrap;
+}
+.group_name{
+    background-color: rgba(0, 0, 0, 0.1);
+    color:#A47BB4;
+    white-space: nowrap;
 }
 
 nav {
-	backface-visibility: hidden; /* Slight boost in scrolling performance */
-	z-index: 9999;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
+    backface-visibility: hidden; /* Slight boost in scrolling performance */
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
 nav ul {
-	text-align: center;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	background-color: #26292e;
-	overflow: hidden;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #26292e;
+    overflow: hidden;
 }
 
 nav ul p {
-	display: inline;
-	margin: 0;
-	padding: 0;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li .material-icons {
   vertical-align: middle;
-	font-size: 100%;
-	padding-bottom: 3px;
+    font-size: 100%;
+    padding-bottom: 3px;
 }
 
 nav ul li {
-	font-size: 1.1rem;
-	padding: 0.5rem;
-	display: inline-block;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: inline-block;
 }
 
 nav ul li:hover {
-	background-color: #444;
-	cursor: pointer;
+    background-color: #444;
+    cursor: pointer;
 }
 
 nav ul li a:link {
-	color: #EEE;
+    color: #EEE;
 }
 nav ul li a:hover {
-	text-decoration: none;
-	color: #FFF;
+    text-decoration: none;
+    color: #FFF;
 }
 nav ul li a:visited {
-	color: #AAB;
+    color: #AAB;
 }
 
 header {
-	padding: 1em 0 0 0;
-	text-align: center;
-	background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
+    padding: 3.5rem 0 0 0;
+    text-align: center;
+    background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
 }
 header article img {
-	position: absolute;
-	border-radius: 104px;
-	border: 6px solid #93ABF7;
-	height: 180px;
-	width: 180px;
+    position: absolute;
+    border-radius: 104px;
+    border: 6px solid #93ABF7;
+    height: 180px;
+    width: 180px;
 }
 header article {
-	display: inline-block;
-	text-align: left;
-	height: 200px;
-	position:relative;
+    display: inline-block;
+    text-align: left;
+    height: 200px;
+    position:relative;
 }
 header h1 {
-	margin: 0 0 0 230px;
-	padding-top: 0.4em;
-	font-size: 4.5rem;
-	font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    margin: 0 0 0 230px;
+    padding-top: 0.4em;
+    font-size: 4.5rem;
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
 }
 header h2 {
-	margin: 0 0 0 230px;
-	font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    margin: 0 0 0 230px;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
 }
 section article {
-	padding: 0 1.5em;
+    padding: 0 1.5em;
 }
-#talk article {
-	text-align: center;
-	margin: 0 auto;
-	max-width: 650px;
+table tr td:first-child{
+    padding: 0 20px 0 0;
 }
-#talk {
-	background: #222;
-}
-#talk h2 {
-	padding-top: 0.5em;
+#join-button{
+    padding:0.5em 1em;
+    font-weight:bold;
+    cursor:pointer;
 }
 #rules {
+    overflow: hidden;
+}
+#rules h1, #info h1 {
+    margin: 0;
+    padding-top: 0.5em;
+    font-size: 3rem;
+}
+#rules article, #info article {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+#info {
+    background: #333;
+    overflow: hidden;
+}
+#info h2 {
+    margin: 0;
+    padding-top: 0.25em;
+    font-size: 2rem;
+}
+#info > article {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+#info > article > h1{
+    flex-basis: 100%;
+    padding: 24px 1.5rem 0 1.5rem;
+}
+#info > article > img{
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% + 300px);
+}
+#info > article > article.infocolumn {
+    width: 50%;
 }
 
-#rules h1 {
-	margin: 0;
-	padding-top: 0.5em;
-	font-size: 3rem;
-}
-#rules article {
-	margin: 0 auto;
-	max-width: 1024px;
+article.infocolumn > table > tbody > tr > td:nth-child(2){
+    font-size: 0.8rem;
 }
 #bpm {
-  overflow: hidden;
+    background: #222;
+    overflow: hidden;
 }
 #bpm h1 {
-	margin: 0.35em 0 0.25em 0;
-	font-size: 2.7rem;
+    margin: 0.35em 0 0.25em 0;
+    font-size: 2.7rem;
 }
 #bpm article {
-	margin: 0 auto;
-	max-width: 800px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+#bpm .button img{
+    transform:translateY(2px);
+}
+#bpm .button img:first-child{
+    margin-left:20px;
 }
 #sb {
-	background: #009D91;
-	color: #FFF;
+    background: #009D91;
+    color: #FFF;
 }
-#sb article {
-	margin: 0 auto;
-	max-width: 800px;
-	font-size: 1.1rem;
-	font-weight: 600;
-	padding: 1em 0 0.25em 0;
+#sb article, #reddit article{
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1em 0 0.25em 0;
 }
 #sb article span {
-	position:relative;
+    position:relative;
 }
 #sb article h1 {
-	text-align: center;
-	margin: 0 0 0.25em 210px;
-	font-size: 3rem;
+    text-align: center;
+    margin: 0 0 0.25em 210px;
+    font-size: 3rem;
 }
 #sb article h1 span {
-	background: #7289da;
+    background: #7289da;
     font-size: 80%;
     font-weight: 600;
     margin-left: 6px;
@@ -186,178 +235,280 @@ section article {
     line-height: 120%;
 }
 #sb article span img {
-	position: absolute;
-	height: auto;
-	width: 180px;
-	border-radius: 104px;
-	border: 4px solid #4CFF7C;
-	Left: 16px;
+    position: absolute;
+    height: auto;
+    width: 180px;
+    border-radius: 104px;
+    border: 4px solid #A47BB4;
+    left: 18px;
 }
 #sb article .pad {
-	margin-left: 230px;
+    margin-left: 230px;
 }
 #sb article .pad div {
-	margin-top: 1em;
-	margin-left: 3em;
+    margin-top: 1em;
+    margin-left: 3em;
 }
-#bronycon {
-	background: #5A3791;
-  overflow: hidden;
+
+#reddit {
+    position: relative;
+    z-index: 10;
+    background: #cee3f8;
+    color: #111;
 }
-#bronycon article {
-	position: relative;
-	padding: 1em 1.5em;
-	max-width: 800px;
-	margin: 0 auto;
-	font-size: 1.1rem;
-	font-weight: 600;
+#reddit article{
+    display: flex;
+    padding: 1em 0;
 }
-#bronycon article p {
-	padding-right: 9rem;
+#reddit article h1 {
+    font-size: 2.9rem;
+    margin: 0;
+    text-align: center;
 }
-#bronycon article h1 {
-	font-size: 2.9rem;
-	margin: 0;
+#reddit article img {
+    height: 180px;
+    width: auto;
 }
+#reddit article .pad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 18px;
+}
+#reddit a:link {
+    color: #7D96CC;
+}
+
 footer {
-	font-size: 0.75rem;
-	text-align: center;
-	background: #26292e;
-	padding: 1em 0;	
+    font-size: 0.75rem;
+    text-align: center;
+    background: #26292e;
+    padding: 1em 0; 
+}
+
+.modal{
+    visibility:hidden;
+    z-index:100;
+    position:fixed;
+    overflow: hidden;
+    width:80%;
+    max-width:500px;
+    top:110%;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(0,0,0,0.66);
+    box-shadow:0 3px 20px rgba(0,0,0,0.25);
+    border-radius:25px;
+    text-align:justify;
+    transition:500ms;
+}
+.modal-show{
+    visibility:visible;
+    top:50%;
+    transform:translateX(-50%)translateY(-50%);
+}
+.modal-text{
+    margin:4vmin;
+}
+.modal-link{
+    box-sizing: border-box;
+    width:100%;
+    padding:2vmin;
+    background:rgba(255,255,255,0.1);
+    font-family: 'Roboto', sans-serif;
+    font-size:200%;
+    font-weight:100;
+    color:white;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-link:hover{
+    background:rgba(255,255,255,0.125);
 }
 
 .button {
-  display: inline-block;
-  margin: 0 0 1em 0;
-  text-shadow: 1px 1px #666;
-  border-radius: 0.4em;
-  padding: 0.5em;
-  transition: all 300ms;
+    display: inline-block;
+    margin: 0 0 1em 0;
+    text-shadow: 1px 1px #666;
+    border-radius: 0.4em;
+    padding: 0.5em;
+    transition: all 300ms;
+}
+
+.button i {
+    line-height: 0.5em;
+    vertical-align: middle;
+    cursor: default;
 }
 
 .button:hover {
-  box-shadow: 0px 2px 10px #111;
+    box-shadow: 0px 2px 10px #111;
   
 }
 .button:active {
-  box-shadow: 0px 2px 10px #111;
-  transition: all 30ms;
+    box-shadow: 0px 2px 10px #111;
+    transition: all 30ms;
 }
 
 .button a {
-  padding: 0.5em;
-  color: #FFFFFF;
-  text-decoration: none;
-  font-weight: 900;
+    padding: 0.5em;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 900;
 }
 
 .blue {
-  background: #477286;
-  border: 3px solid #6E91A1;
-  margin: 0.5em 1em 1em 1em;
+    background: #477286;
+    border: 3px solid #6E91A1;
+    margin: 0.5em 1em 1em 1em;
 }
 .blue:hover {
-  background: #608090;
+    background: #608090;
 }
 .blue:active {
-  background: #27556C;
+    background: #27556C;
 }
 .green {
-  background: #47A662;
-  border: 3px solid #47D062;
-  font-size: 1.4rem;
-  margin: 0.5em 2em 1em 2em;
+    background: #47A662;
+    border: 3px solid #47D062;
+    font-size: 1.4rem;
+    margin: 0.5em 2em 1em 2em;
 }
 .button a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 .green:hover {
-  background: #50B070;
+    background: #50B070;
 }
 .green:active {
-  background: #279C55;
+    background: #279C55;
 }
 
-.cyan {
-  background: #4772CF;
-  border: 3px solid #6E91FF;
-  margin: 0.5em 1em 0em 1em;
+.purple {
+    background: #6441a4;
+    border: 3px solid #6f49b8;
+    margin: 0.5em 1em 0em 1em;
 }
-.cyan:hover {
-  background: #5782DF;
+.purple:hover {
+    background: #804fdb;
 }
-.cyan:active {
-  background: #27556C;
+.purple:active {
+    background: #6234b8;
 }
+.blur{filter:blur(20px)}
 
-.stamp { position: absolute; top: 45px; right: 10px; transform: rotate(30deg); height: 125px; width: auto; }
+.oslogo {
+    height: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
 
 #bpm article h1 .small {
-  display: none;
+    display: none;
 }
+
+.slide{
+    animation-name: slide;
+    animation-duration: 4s;
+}
+
+@keyframes slide{
+  0%  {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  5%  {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  10% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  15% {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  20% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  50% {transform:scaleX(1);left: calc(50%);bottom: -10px;;}
+  60% {transform:scaleX(-1);left: calc(50%);bottom: -10px;;}
+  90% {transform:scaleX(-1);left: calc(50% + 300px);bottom: -10px;;}
+  100%{transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;;}
+}
+
 @media (max-width: 1500px) {
-body {
-	background-image: none;
+    body {
+        background-image: none;
+    }
 }
+@media (max-width: 1000px) {
+    #twismile {
+        display: none;
+    }
+    #info > article > article.infocolumn {
+        width: initial;
+    }
 }
 @media (max-width: 740px) {
-	.stamp {
-		top: 95px;
-	}
+    .modal {
+        max-width:auto;
+    }
+    .modal-link {
+        padding:5vmin;
+    }
+    #reddit article img{
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 120px;
+        opacity: 0.2;
+        pointer-events: none;
+    }
 }
 @media (max-width: 630px) {
-  header article {
-    text-align:center;
-  }
-  header article img {
-    position:relative;
-  }
-  header h1 {
-    padding: 0;
-    margin: 0;
-  }
-  header h2 {
-    margin: 0;
-  }
-  header .green {
-    margin-top: 1em;
-  }
+    header article {
+        text-align:center;
+    }
+    header article img {
+        position:relative;
+    }
+    header h1 {
+        padding: 0;
+        margin: 0;
+    }
+    header h2 {
+        margin: 0;
+    }
+    header .green {
+        margin-top: 1em;
+    }
 
-  nav ul li {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  nav ul p {
-    display: none;
-  }
+    nav ul li {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    nav ul p {
+        display: none;
+    }
 }
 @media (max-width: 560px) {
-	#sb article .pad div {
-		margin-left: 0;
-	}
-  #sb article .pad {
-    margin-left: 0;
-  }
-  #sb article h1 {
-    text-align: center;
-    margin-left: 0;
-  }
-  #sb article {
-    text-align:center;
-  }
-  #sb article span img {
-    position:relative;
-    left: 0;
-  }
+    #sb article .pad div {
+        margin-left: 0;
+    }
+    #sb article .pad {
+        margin-left: 0;
+    }
+    #sb article h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+    #sb article {
+        text-align:center;
+    }
+    #sb article span img {
+        position:relative;
+        left: 0;
+    }
+    #reddit article h1 {
+        font-size: 2rem;
+    }
 }
 @media (max-width: 440px) {
-  	.stamp {
-		top: 10rem;
-	}
-#bpm article h1 .small {
-  display: inline;
-}
-#bpm article h1 .large {
-  display: none;
-}
+    #bpm article h1 .small {
+        display: inline;
+    }
+    #bpm article h1 .large {
+        display: none;
+    }
 }
