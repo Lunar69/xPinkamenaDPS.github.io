@@ -185,24 +185,6 @@ table tr td:first-child{
 article.infocolumn > table > tbody > tr > td:nth-child(2){
     font-size: 0.8rem;
 }
-#bpm {
-    background: #222;
-    overflow: hidden;
-}
-#bpm h1 {
-    margin: 0.35em 0 0.25em 0;
-    font-size: 2.7rem;
-}
-#bpm article {
-    margin: 0 auto;
-    max-width: 800px;
-}
-#bpm .button img{
-    transform:translateY(2px);
-}
-#bpm .button img:first-child{
-    margin-left:20px;
-}
 #sb {
     background: #009D91;
     color: #FFF;
@@ -248,35 +230,6 @@ article.infocolumn > table > tbody > tr > td:nth-child(2){
 #sb article .pad div {
     margin-top: 1em;
     margin-left: 3em;
-}
-
-#reddit {
-    position: relative;
-    z-index: 10;
-    background: #cee3f8;
-    color: #111;
-}
-#reddit article{
-    display: flex;
-    padding: 1em 0;
-}
-#reddit article h1 {
-    font-size: 2.9rem;
-    margin: 0;
-    text-align: center;
-}
-#reddit article img {
-    height: 180px;
-    width: auto;
-}
-#reddit article .pad{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 18px;
-}
-#reddit a:link {
-    color: #7D96CC;
 }
 
 footer {
@@ -386,17 +339,6 @@ footer {
     background: #279C55;
 }
 
-.purple {
-    background: #6441a4;
-    border: 3px solid #6f49b8;
-    margin: 0.5em 1em 0em 1em;
-}
-.purple:hover {
-    background: #804fdb;
-}
-.purple:active {
-    background: #6234b8;
-}
 .blur{filter:blur(20px)}
 
 .oslogo {
