@@ -347,10 +347,6 @@ footer {
     margin-right: 4px;
 }
 
-#bpm article h1 .small {
-    display: none;
-}
-
 .slide{
     animation-name: slide;
     animation-duration: 4s;
