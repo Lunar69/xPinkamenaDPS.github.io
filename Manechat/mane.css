@@ -1,7 +1,7 @@
 /* Manechat CSS
    By: Cloud Hop (and maybe DeltaPHC) */
 
-body {
+   body {
     background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
     color: #f0f0f0;
     margin: 0;
@@ -23,19 +23,15 @@ a:hover {
 a:visited {
     color: #99b;
 }
-
-article {
+article{
     box-sizing: border-box;
 }
-
-article ol,
-article ul {
+article ol, article ul {
     margin: 0;
     padding: 0 0 0 1.5rem;
 }
 
-article ol li,
-article ul li {
+article ol li, article ul li {
     margin: 0 0 0.5rem 0;
     padding-left: 0.2rem;
 }
@@ -49,30 +45,39 @@ article ol li ol {
     color: #6c8bd7;
     white-space: nowrap;
 }
-
-.group_name {
+.group_name{
     background-color: rgba(0, 0, 0, 0.1);
-    color: #A47BB4;
+    color:#A47BB4;
     white-space: nowrap;
 }
 
 nav {
-    backface-visibility: hidden;
-    /* Slight boost in scrolling performance */
+    backface-visibility: hidden; /* Slight boost in scrolling performance */
     z-index: 9999;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
+    height: 42px;
+    background-color: #26292e;
 }
 
 nav ul {
+    position: absolute;
     text-align: center;
     list-style-type: none;
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #26292e;
     overflow: hidden;
+    transition: 500ms;
+}
+
+nav ul:first-child{
+    right: 50%;
+}
+nav ul:nth-child(3){
+    left: 50%;
 }
 
 nav ul p {
@@ -82,12 +87,13 @@ nav ul p {
 }
 
 nav ul li .material-icons {
-    vertical-align: middle;
+  vertical-align: middle;
     font-size: 100%;
     padding-bottom: 3px;
 }
 
 nav ul li {
+    height: 100%;
     font-size: 1.1rem;
     padding: 0.5rem;
     display: inline-block;
@@ -101,14 +107,38 @@ nav ul li:hover {
 nav ul li a:link {
     color: #EEE;
 }
-
 nav ul li a:hover {
     text-decoration: none;
     color: #FFF;
 }
-
 nav ul li a:visited {
     color: #AAB;
+}
+nav img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    border-radius: 100%;
+    border: 5px solid #26292e;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, 12px);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.scrolled ul:first-child{
+    transform: translate(-35px, 0);
+}
+.scrolled ul:nth-child(3){
+    transform: translate(35px, 0);
+}
+.scrolled img{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 2px);
 }
 
 header {
@@ -116,7 +146,6 @@ header {
     text-align: center;
     background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
 }
-
 header article img {
     position: absolute;
     border-radius: 104px;
@@ -124,101 +153,81 @@ header article img {
     height: 180px;
     width: 180px;
 }
-
 header article {
     display: inline-block;
     text-align: left;
     height: 200px;
-    position: relative;
+    position:relative;
 }
-
 header h1 {
     margin: 0 0 0 230px;
     padding-top: 0.4em;
     font-size: 4.5rem;
     font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
 }
-
 header h2 {
     margin: 0 0 0 230px;
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
 }
-
 section article {
     padding: 0 1.5em;
 }
-
-table tr td:first-child {
+table tr td:first-child{
     padding: 0 20px 0 0;
 }
-
-#join-button {
-    padding: 0.5em 1em;
-    font-weight: bold;
-    cursor: pointer;
+#join-button{
+    padding:0.5em 1em;
+    font-weight:bold;
+    cursor:pointer;
 }
-
 #rules {
     overflow: hidden;
 }
-
-#rules h1,
-#info h1 {
+#rules h1, #info h1 {
     margin: 0;
     padding-top: 0.5em;
     font-size: 3rem;
 }
-
-#rules article,
-#info article {
+#rules article, #info article {
     margin: 0 auto;
     max-width: 1024px;
 }
-
 #info {
     background: #333;
     overflow: hidden;
 }
-
 #info h2 {
     margin: 0;
     padding-top: 0.25em;
     font-size: 2rem;
 }
-
-#info>article {
+#info > article {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 }
-
-#info>article>h1 {
+#info > article > h1{
     flex-basis: 100%;
     padding: 24px 1.5rem 0 1.5rem;
 }
-
-#info>article>img {
+#info > article > img{
     position: absolute;
     bottom: -10px;
     left: calc(50% + 300px);
 }
-
-#info>article>article.infocolumn {
+#info > article > article.infocolumn {
     width: 50%;
 }
 
-article.infocolumn>table>tbody>tr>td:nth-child(2) {
+article.infocolumn > table > tbody > tr > td:nth-child(2){
     font-size: 0.8rem;
 }
-
 #sb {
     background: #009D91;
     color: #FFF;
 }
-
-#sb article,
-#reddit article {
+#sb article, #reddit article{
     position: relative;
     margin: 0 auto;
     max-width: 800px;
@@ -226,17 +235,14 @@ article.infocolumn>table>tbody>tr>td:nth-child(2) {
     font-weight: 600;
     padding: 1em 0 0.25em 0;
 }
-
 #sb article span {
-    position: relative;
+    position:relative;
 }
-
 #sb article h1 {
     text-align: center;
     margin: 0 0 0.25em 210px;
     font-size: 3rem;
 }
-
 #sb article h1 span {
     background: #7289da;
     font-size: 80%;
@@ -248,7 +254,6 @@ article.infocolumn>table>tbody>tr>td:nth-child(2) {
     vertical-align: middle;
     line-height: 120%;
 }
-
 #sb article span img {
     position: absolute;
     height: auto;
@@ -257,67 +262,94 @@ article.infocolumn>table>tbody>tr>td:nth-child(2) {
     border: 4px solid #A47BB4;
     left: 18px;
 }
-
 #sb article .pad {
     margin-left: 230px;
 }
-
 #sb article .pad div {
     margin-top: 1em;
     margin-left: 3em;
+}
+
+#reddit {
+    position: relative;
+    z-index: 10;
+    background: #cee3f8;
+    color: #111;
+}
+#reddit article{
+    display: flex;
+    padding: 1em 0;
+}
+#reddit article h1 {
+    font-size: 2.9rem;
+    margin: 0;
+    text-align: center;
+}
+#reddit article img {
+    height: 180px;
+    width: auto;
+}
+#reddit article .pad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 18px;
+}
+#reddit a:link {
+    color: #7D96CC;
 }
 
 footer {
     font-size: 0.75rem;
     text-align: center;
     background: #26292e;
-    padding: 1em 0;
+    padding: 1em 0; 
 }
 
-.modal {
-    visibility: hidden;
-    z-index: 100;
-    position: fixed;
+.modal{
+    visibility:hidden;
+    z-index:100;
+    position:fixed;
     overflow: hidden;
-    width: 80%;
-    max-width: 500px;
-    top: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.66);
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    text-align: justify;
-    transition: 500ms;
+    width:calc(100% - 8vmin);
+    max-width:500px;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.33);
+    border: 1px solid rgba(0, 0, 0, 0.33);
+    border-radius:25px;
+    text-align:justify;
+    transition:300ms;
+    transform:translate(-50%, -50%)scale(0);
+    opacity: 0;
 }
-
-.modal-show {
+.modal-show{
+    opacity: 1;
     visibility: visible;
-    top: 50%;
-    transform: translateX(-50%)translateY(-50%);
+    transform:translate(-50%, -50%)scale(1);
 }
-
-.modal-text {
-    margin: 4vmin;
+.modal-text{
+    margin:4vmin;
 }
-
-.modal-link {
+.modal-link{
     box-sizing: border-box;
-    width: 100%;
-    padding: 2vmin;
-    background: rgba(255, 255, 255, 0.1);
+    width:100%;
+    padding:2vmin;
+    background:rgba(255,255,255,0.1);
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
-    font-weight: 100;
-    color: white;
-    text-decoration: none;
+    font-size:200%;
+    font-weight:100;
+    color:white !important;
+    text-decoration:none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.modal-link:hover {
-    background: rgba(255, 255, 255, 0.125);
+.modal-link:hover{
+    background:rgba(255,255,255,0.125);
+    text-decoration: none;
 }
 
 .button {
@@ -336,11 +368,10 @@ footer {
 }
 
 .button:hover {
-    box-shadow: 0px 2px 10px #111;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+  
 }
-
 .button:active {
-    box-shadow: 0px 2px 10px #111;
     transition: all 30ms;
 }
 
@@ -356,36 +387,46 @@ footer {
     border: 3px solid #6E91A1;
     margin: 0.5em 1em 1em 1em;
 }
-
 .blue:hover {
     background: #608090;
 }
-
 .blue:active {
     background: #27556C;
 }
-
 .green {
     background: #47A662;
     border: 3px solid #47D062;
     font-size: 1.4rem;
     margin: 0.5em 2em 1em 2em;
 }
-
 .button a:hover {
     text-decoration: underline;
 }
-
 .green:hover {
     background: #50B070;
 }
-
 .green:active {
     background: #279C55;
 }
 
-.blur {
-    filter: blur(20px)
+.cyan {
+    background: #4772CF;
+    border: 3px solid #6E91FF;
+    margin: 0.5em 1em 0em 1em;
+}
+.cyan:hover {
+    background: #5782DF;
+}
+.cyan:active {
+    background: #27556C;
+}
+.blur{
+    filter:blur(20px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
 }
 
 .oslogo {
@@ -394,61 +435,21 @@ footer {
     margin-right: 4px;
 }
 
-.slide {
+.slide{
     animation-name: slide;
     animation-duration: 4s;
 }
 
-@keyframes slide {
-    0% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: -10px;
-    }
-    5% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: 0px;
-    }
-    10% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: -10px;
-    }
-    15% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: 0px;
-    }
-    20% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: -10px;
-    }
-    50% {
-        transform: scaleX(1);
-        left: calc(50%);
-        bottom: -10px;
-        ;
-    }
-    60% {
-        transform: scaleX(-1);
-        left: calc(50%);
-        bottom: -10px;
-        ;
-    }
-    90% {
-        transform: scaleX(-1);
-        left: calc(50% + 300px);
-        bottom: -10px;
-        ;
-    }
-    100% {
-        transform: scaleX(1);
-        left: calc(50% + 300px);
-        bottom: -10px;
-        ;
-    }
+@keyframes slide{
+  0%  {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  5%  {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  10% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  15% {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  20% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  50% {transform:scaleX(1);left: calc(50%);bottom: -10px;;}
+  60% {transform:scaleX(-1);left: calc(50%);bottom: -10px;;}
+  90% {transform:scaleX(-1);left: calc(50% + 300px);bottom: -10px;;}
+  100%{transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;;}
 }
 
 @media (max-width: 1500px) {
@@ -456,24 +457,19 @@ footer {
         background-image: none;
     }
 }
-
 @media (max-width: 1000px) {
     #twismile {
         display: none;
     }
-    #info>article>article.infocolumn {
+    #info > article > article.infocolumn {
         width: initial;
     }
 }
-
 @media (max-width: 740px) {
     .modal {
-        max-width: auto;
+        max-width:auto;
     }
-    .modal-link {
-        padding: 5vmin;
-    }
-    #reddit article img {
+    #reddit article img{
         z-index: -1;
         position: absolute;
         bottom: 0;
@@ -483,13 +479,12 @@ footer {
         pointer-events: none;
     }
 }
-
 @media (max-width: 630px) {
     header article {
-        text-align: center;
+        text-align:center;
     }
     header article img {
-        position: relative;
+        position:relative;
     }
     header h1 {
         padding: 0;
@@ -501,6 +496,7 @@ footer {
     header .green {
         margin-top: 1em;
     }
+
     nav ul li {
         padding-left: 1em;
         padding-right: 1em;
@@ -508,8 +504,10 @@ footer {
     nav ul p {
         display: none;
     }
+    .modal-link {
+        padding:3.5vmin;
+    }
 }
-
 @media (max-width: 560px) {
     #sb article .pad div {
         margin-left: 0;
@@ -522,22 +520,13 @@ footer {
         margin-left: 0;
     }
     #sb article {
-        text-align: center;
+        text-align:center;
     }
     #sb article span img {
-        position: relative;
+        position:relative;
         left: 0;
     }
     #reddit article h1 {
         font-size: 2rem;
-    }
-}
-
-@media (max-width: 440px) {
-    #bpm article h1 .small {
-        display: inline;
-    }
-    #bpm article h1 .large {
-        display: none;
     }
 }
